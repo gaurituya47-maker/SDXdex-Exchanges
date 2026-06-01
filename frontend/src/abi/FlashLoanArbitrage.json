@@ -1,0 +1,96 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "tokenBorrow",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "tokenTarget",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "borrowAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint8",
+              "name": "buyDex",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "sellDex",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint24",
+              "name": "v3FeeBuy",
+              "type": "uint24"
+            },
+            {
+              "internalType": "uint24",
+              "name": "v3FeeSell",
+              "type": "uint24"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minProfit",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct FlashLoanArbitrage.ArbitrageParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "executeArbitrage",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "tokenBorrow",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "profit",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "buyDex",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "sellDex",
+          "type": "uint8"
+        }
+      ],
+      "name": "ArbitrageExecuted",
+      "type": "event"
+    }
+  ]
+}
